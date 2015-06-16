@@ -1,0 +1,20 @@
+{
+  "name": "angular-setup",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "interfake": "^1.13.0"
+  },
+  "devDependencies": {
+    "express": "^4.12.4",
+    "gulp": "^3.9.0",
+    "gulp-nodemon": "^2.0.3",
+    "gulp-webserver": "^0.9.1"
+  }
+}
