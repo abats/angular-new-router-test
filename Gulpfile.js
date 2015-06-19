@@ -33,7 +33,7 @@ gulp.task('serve', function() {
   gulp.src('app')
     .pipe(webserver({
       port: 8888,
-      fallback: 'app/index.html',
+      fallback: 'index.html',
       livereload: true,
       open: true
     }));
