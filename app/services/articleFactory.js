@@ -1,9 +1,13 @@
-angular
-    .module('app')
-    .factory('articleFactory', _articleFactory);
+angular.module('app.services', [])
 
-function _articleFactory() {
-    function getArticles() {
-        console.log('return articles');
+    .factory('articleFactory', ['$http', function( $http ) {
+
+    var urlBase = '/api/news/';
+    var newsFactory = {};
+
+    newsFactory.getNews = function () {
+        return 'news items';
     }
-}
+
+    return newsFactory;
+}]);

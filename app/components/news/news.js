@@ -1,9 +1,8 @@
-angular.module('app.news', [  ])
+angular.module('app.news', ['app.services'])
 
-    .controller('NewsController', [function ( articleFactory ) {
+    .controller('NewsController', ['testValue', 'articleFactory', function (kek, articleFactory) {
         this.title = 'News';
         console.log('news controller loaded');
+        console.log(articleFactory.getNews());
 
-        console.log(articleFactory);
-
-    }]);
+    }])
