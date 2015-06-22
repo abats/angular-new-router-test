@@ -7,7 +7,7 @@ angular.module('app.services', [])
 
     newsFactory.getNews = function () {
         return 'news items';
-    }
+    };
 
     return newsFactory;
 }]);
