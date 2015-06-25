@@ -7,4 +7,4 @@ Trying out the 'angular new router' with angular 1.4
 - bower install
 
 ##### commands
-- grunt dev ( to start server/stub ) 
+- gulp dev ( to start server/stub ) 
