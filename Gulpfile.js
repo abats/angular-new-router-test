@@ -1,6 +1,9 @@
+'use strict';
+
 var gulp = require('gulp')
-  , nodemon = require('gulp-nodemon')
-  , webserver = require('gulp-webserver');
+    , nodemon = require('gulp-nodemon')
+    , webserver = require('gulp-webserver')
+    , sass = require('gulp-sass');
 
 /*
  * Defaults, build process
@@ -9,10 +12,10 @@ gulp.task('default', function(){
 });
 
 /*
- * Start stub server and web server
+ * Start stub server and web server, compile scss
  */
 gulp.task('dev', function(){
-  gulp.start('stub', 'serve');
+  gulp.start('stub', 'serve', 'sass', 'sass:watch');
 });
 
 /*
@@ -37,4 +40,18 @@ gulp.task('serve', function() {
       livereload: true,
       open: true
     }));
+});
+
+/*
+ * Sass
+ */
+gulp.task('sass', function(){
+    gulp.src('app/scss/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('app/target/dev/css/'));
+
+});
+
+gulp.task('sass:watch', function () {
+    gulp.watch('app/scss/*.scss', ['sass']);
 });

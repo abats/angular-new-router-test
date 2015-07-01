@@ -9,28 +9,67 @@
     <base href="/"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="target/dev/css/style.css">
     
 						
 </head>
 <body ng-app="app" ng-controller="AppController as app">
 
-    <nav ng-viewport="nav"></nav>
-    <div ng-viewport="content"></div>
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Project Setup</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <nav ng-viewport="nav"></nav>
+                <!--<form class="navbar-form navbar-right">-->
+                    <!--<div class="form-group">-->
+                        <!--<input type="text" placeholder="Email" class="form-control">-->
+                    <!--</div>-->
+                    <!--<div class="form-group">-->
+                        <!--<input type="password" placeholder="Password" class="form-control">-->
+                    <!--</div>-->
+                    <!--<button type="submit" class="btn btn-success">Sign in</button>-->
+                <!--</form>-->
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div ng-viewport="content"></div>
+        <div ng-viewport="content2"></div>
+        <div ng-viewport="content3"></div>
+
+        <hr>
+
+        <footer>
+            <p>&copy; Company 2014</p>
+        </footer>
+    </div>
 
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
-    <!--<script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.14/angular-ui-router.min.js"></script>    <!--<script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.14/angular-ui-router.min.js"></script>-->
     <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-animate.min.js"></script>
     <script src="/vendor/router.es5.min.js"></script>
    
     <script src="/app.js"></script>
+
+    <script src="/services/newsFactory.js"></script>
+    <script src="/app.config.js"></script>
+
     <script src="/components/home/home.js"></script>
     <script src="/components/news/news.js"></script>
     <script src="/components/nav/nav.js"></script>
-    <script src="/services/articleFactory.js"></script>
+    <script src="/components/void/void.js"></script>
+
 
 </body>
 </html>
-
 
