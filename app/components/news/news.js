@@ -2,10 +2,10 @@ angular
     .module('app.news', ['app.services'])
     .controller('NewsController', NewsController);
 
-
 NewsController.$inject = ['newsFactory'];
 
 function NewsController(newsFactory) {
+    'use strict';
 
     var news = this;
     news.title = 'News';
